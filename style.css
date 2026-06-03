@@ -73,7 +73,7 @@ section {
 /* --- GRILLE DES COMPÉTENCES --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Force 3 colonnes égales */
+    grid-template-columns: repeat(3, 1fr); /* Force 3 colonnes égales */
     gap: 20px;                            /* Espace entre les cartes */
     margin-top: 30px;
     max-width: 1200px;
