@@ -1,6 +1,6 @@
 /* Style général */
-body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; color: #2d3748; padding: 20px; line-height: 1.6; }
-.container { max-width: 1000px; margin: 0 auto; }
+body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif;min-height: 100vh;display: flex; flex-direction: column; align-items: center; color: #2d3748; padding: 20px; line-height: 1.6; }
+.container { max-width: 1000px; margin: 0 auto; text-align: center;}
 
 /* Titres et traits */
 .section-title { text-align: center; color: #2d3748; margin-top: 50px; }
@@ -74,7 +74,7 @@ section {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Force 3 colonnes égales */
-    gap: 20px;                            /* Espace entre les cartes */
+    gap: 30px;                            /* Espace entre les cartes */
     margin-top: 30px;
     max-width: 1200px;
     margin-left: auto;
@@ -83,15 +83,16 @@ section {
 
 /* --- STYLE DES CARTES --- */
 .skill-card {
-    background: #ffffff;
+    background-color: white;
     padding: 25px;
-    border: 1px solid #ddd;                /* L'encadrement visible */
-    border-radius: 16px;                   /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Ombre douce */
+    border: 2px solid #e0e0e0;                /* L'encadrement visible */
+    border-radius: 20px;                   /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0,100,255,0.02); /* Ombre douce */
     text-align: center;                    /* Texte centré */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 /* --- RESPONSIVE : Pour mobile (écran petit) --- */
@@ -99,4 +100,28 @@ section {
     .skills-grid {
         grid-template-columns: 1fr;        /* Passe à 1 seule colonne */
     }
+}
+@media (min-width: 768px) {
+    input, textarea {
+        margin-bottom: 10px; /* Réduit l'espace entre les champs sur PC */
+        padding: 8px;       /* Réduit le padding interne */
+    }
+}
+/* Le conteneur qui regroupe vos projets */
+.projects-grid {
+    display: flex;             /* Active l'alignement en ligne */
+    justify-content: center;   /* Centre les projets horizontalement */
+    flex-wrap: wrap;           /* Permet aux projets de passer à la ligne sur mobile */
+    gap: 30px;                 /* Espace entre les deux cartes de projet */
+    padding: 20px;
+}
+
+/* Le style de chaque carte projet */
+.project-card {
+    width: 300px;              /* Largeur fixe pour que les deux soient identiques */
+    background: #ffffff;
+    border-radius: 20px;       /* Coins arrondis */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* L'effet d'ombre */
+    text-align: center;
 }
